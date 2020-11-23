@@ -1,6 +1,7 @@
 window.onload = () => {
     console.log("Cargó el html");
     myFunction();
+    console.log("Final del html \n");
 }
 
 function myFunction() { 
@@ -10,7 +11,8 @@ function myFunction() {
     var dominio=new Array(3);
     
 
-    let pregunta = window.prompt("coloque la cantidad de dominios que desea generar");
+    //let pregunta = window.prompt("coloque la cantidad de dominios que desea generar");
+    let pregunta = 10;
     limite=parseInt(pregunta);
     
     //var len;
@@ -42,10 +44,11 @@ function myFunction() {
 
         //alert("empezó a correr el for"); //alerta que comenzó el for correctamente
         let tag = document.createElement("p");
-        let text = document.createTextNode(`\n ${primero[i]+segundo[j]+tercero[k]+dominio[l]}`);
+        let text = document.createTextNode(`${primero[i]+segundo[j]+tercero[k]+dominio[l]}`);
         tag.appendChild(text);
         let element = document.body.querySelector("#parrafos");
         element.appendChild(tag);
+        console.log(`${primero[i]+segundo[j]+tercero[k]+dominio[l]}`);
                      
     } 
 
