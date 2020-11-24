@@ -1,10 +1,18 @@
-window.onload = () => {
+/*window.onload = () => {
     console.log("Cargó el html");
     myFunction();
     console.log("Final del html \n");
 }
 
-function myFunction() { 
+function myFunction() { */
+    var http = require('http');
+    http.createServer(function (req, res) {
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      //res.end('Hello World\n');
+    }).listen(1337, "127.0.0.1");
+    console.log('Server running at http://127.0.0.1:1337/');
+
+
     var primero=new Array(4);
     var segundo=new Array(4);
     var tercero=new Array(4);
@@ -43,14 +51,14 @@ function myFunction() {
         var l=(Math.floor((Math.random() * dominio.length)));
 
         //alert("empezó a correr el for"); //alerta que comenzó el for correctamente
-        let tag = document.createElement("p");
+     /*   let tag = document.createElement("p");
         let text = document.createTextNode(`${primero[i]+segundo[j]+tercero[k]+dominio[l]}`);
         tag.appendChild(text);
         let element = document.body.querySelector("#parrafos");
-        element.appendChild(tag);
+        element.appendChild(tag);*/
         console.log(`${primero[i]+segundo[j]+tercero[k]+dominio[l]}`);
                      
     } 
 
-    alert("dominio aleatorios generados");
-}
+    //alert("dominio aleatorios generados");
+//}
