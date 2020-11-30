@@ -1,3 +1,5 @@
+//run code with: node app.js
+
 /*window.onload = () => {
     console.log("Cargó el html");
     myFunction();
